@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000162ba  00000000  00000000  0002ac50  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000093de  00000000  00000000  00040f0a  2**0
+ 17 .debug_line   000093e2  00000000  00000000  00040f0a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00081fc1  00000000  00000000  0004a2e8  2**0
+ 18 .debug_str    00081fc1  00000000  00000000  0004a2ec  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000cc2a9  2**0
+ 19 .comment      00000053  00000000  00000000  000cc2ad  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002624  00000000  00000000  000cc2fc  2**2
+ 20 .debug_frame  00002624  00000000  00000000  000cc300  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -627,7 +627,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  HAL_Delay(1000);
+	   HAL_Delay(1000);
  8000526:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  800052a:	f000 fa3b 	bl	80009a4 <HAL_Delay>
 	  HAL_GPIO_TogglePin(Led_Test_All_GPIO_Port, Led_Test_All_Pin);
