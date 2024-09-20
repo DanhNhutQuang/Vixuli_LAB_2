@@ -166,13 +166,12 @@ void display7SEG (int num) {
 }
 
 void initState() {
-	clear7SEG();
-	HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, GPIO_PIN_SET);
-}
-
+	display7SEG(8);
+		HAL_Delay(2000);
+		clear7SEG();
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_All, GPIO_PIN_SET);
+		HAL_Delay(1000);
+	}
 const unsigned int MAX_LED = 4;
 int led_buffer[4] = {1, 2, 3, 4};
 
