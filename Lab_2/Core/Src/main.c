@@ -211,6 +211,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_GPIO_WritePin(Dot_GPIO_Port, Dot_Pin, GPIO_PIN_RESET);
   while (1)
   {
 	  HAL_GPIO_TogglePin(Led_Test_All_GPIO_Port, Led_Test_All_Pin);
